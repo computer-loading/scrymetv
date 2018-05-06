@@ -1,0 +1,8 @@
+{
+	"name" : "",
+	"version" : "0.1",
+	"description" : "extension pour Scryme TV",
+	"browser_action" : {
+		"popup" : "index.html"
+	}
+}
