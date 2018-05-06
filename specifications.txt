@@ -1,0 +1,8 @@
+Extension Google Chrome et Mozilla Firefox :
+
+Afficher les notifications de stream
+Afficher les notifications de nouvelle vidéos
+Faire un bouton pour activer/désactiver les notifications Youtube et un pour Twitch
+2 "petits onglets" un pour le stream en cours ainsi que la dernière vidéo Youtube et un autre pour afficher l'image
+du planning (l'image sera donner)
+A coter des "2 petits onglets mettre tout les réseaux sociaux (Twitter, Twitch, Youtube, Discord)(modifié)

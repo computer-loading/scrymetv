@@ -4,14 +4,19 @@
 	<head>
 		<style type="text/css">
 			#social li img {
-				width: 100px;
-				height: 100px;
+				width: 64px;
+				height: 64px;
 			}
 
-			#social {
-
+			#social li {
+				display: inline;
 			}
-			
+
+			#nav li {
+				display: inline;
+				border: solid black 1px;
+			}
+
 		</style>
 	</head>
 	<body>
@@ -21,10 +26,15 @@
 			<li><a href="https://discord.gg/FFeWrnj"><img src="./images/discord.png"></a></li>
 			<li><a href="https://twitter.com/FrenchyCommu"><img src="./images/twitter.png"></a></li>
 		</ul>
-		<ul>
+		<ul id="nav">
 			<li id="Planning">Planning</li>
 			<li id="Stream">Stream</li>
 		</ul>
+		<div id="Planning_div">
+			<img src="./images/planning">	
+		</div>
+
+		<div id="Stream_div"></div>
 	</body>
 
 	<script type="text/javascript">
