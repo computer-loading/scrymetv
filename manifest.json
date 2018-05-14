@@ -4,6 +4,9 @@
 	"description" : "extension pour Scryme TV",
 	"browser_action" : {
 		"default_icon" : "./images/logo.png",
-		"popup" : "index.html"
+		"default_popup" : "index.html"
+	},
+	"background" : {
+		"scripts" : ["background.js"]
 	}
 }
