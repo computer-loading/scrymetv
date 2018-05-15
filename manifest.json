@@ -1,4 +1,5 @@
 {
+	"manifest_version" : 2,
 	"name" : "",
 	"version" : "0.1",
 	"description" : "extension pour Scryme TV",

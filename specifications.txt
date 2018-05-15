@@ -6,3 +6,19 @@ Faire un bouton pour activer/désactiver les notifications Youtube et un pour Tw
 2 "petits onglets" un pour le stream en cours ainsi que la dernière vidéo Youtube et un autre pour afficher l'image
 du planning (l'image sera donner)
 A coter des "2 petits onglets mettre tout les réseaux sociaux (Twitter, Twitch, Youtube, Discord)(modifié)
+
+	Graphisme
+
+- Trois couleurs principales:
+	#0066ff
+	#ccccff
+	#0066cc
+
+- Idée interface?
+	Deux "Onglets"
+
+Affiche le stream en cours et la dernière vidéo youtube
+	=> Redirige vers twitch ou youtube. Pas d' Embed Player
+		=> considérer comme image ( "background")
+		=> YTB : Afficher miniature
+		
