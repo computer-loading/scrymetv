@@ -1,3 +1,27 @@
+// request permission on page load
+document.addEventListener('DOMContentLoaded', function () {
+  if (!Notification) {
+    alert('Desktop notifications not available in your browser. Try Chromium.'); 
+    return;
+  }
+
+  if (Notification.permission !== "granted")
+    Notification.requestPermission();
+});
+
+function notifyMe(title, text) {
+    var notification = new Notification(title, {
+      icon: 'images/logo_normal.png',
+      body: text,
+    });
+
+    notification.onclick = function () {
+      window.open("https://twitch.tv/frenchycommunity");      
+    };
+
+}
+
+
 var xhr = new XMLHttpRequest();
 xhr.open("GET", "https://api.twitch.tv/kraken/streams/?channel=frenchycommunity&client_id=wjhv3b2zg2sc51s1qj9a6emuy8le7s", true);
 xhr.onreadystatechange = function(channel) {
@@ -13,7 +37,13 @@ xhr.onreadystatechange = function(channel) {
       elm.style.color = "red";
       elm.innerHTML = "La Frenchy n'est pas en live actuellement. Mais vous pouvez regarder notre dernière vidéo Youtube, ou notre dernier stream en replay :) ! ";
     }else{
-      
+
+      last_stream_url.href = "https://twitch.tv/frenchycommunity";
+      last_stream_title.innerHTML = data.channel.status.concat("<br/>joue à ".concat(data.stream.game));
+      last_stream_thumbnail.src = data.stream.preview.medium;
+      if(Notification.permission == "granted"){
+        notifyMe();
+      }
       elm.style.color = "green";
       elm.innerHTML = "Viens voir la Frenchy en live maintenant !";
     }
@@ -64,3 +94,22 @@ ytb.onreadystatechange = function(){
 }
 
 ytb.send();
+
+//tabs / navigate
+var video_tab = document.getElementById("last_videos");
+var planning_tab = document.getElementById("planning");
+
+var video_btn = document.getElementById("videos")
+video_btn.onclick = function() {
+  video_tab.style.display = block;
+  video_tab.style.visibility = visible;
+  planning_tab.style.display = none;
+  planning_tab.style.visibility = hidden;
+}
+var planning_btn = document.getElementById("tab_planning")
+planning_btn.onclick = function() {
+  video_tab.style.display = none;
+  video_tab.style.visibility = hidden;
+  planning_tab.style.display = block;
+  planning_tab.style.visibility = visible;
+}

@@ -20,8 +20,6 @@
  },
  "permissions" : [
  	"content_security_policy",
- 	"https://ajax.googleapis.com",
- 	"https://apis.google.com",
- 	"https://accounts.google.com"
+ 	"notifications"
  ]
 }
