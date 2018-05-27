@@ -1,43 +1,41 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<style type="text/css">
-			#social li img {
-				width: 64px;
-				height: 64px;
-			}
+<style>
+ h1,p{
+    text-align:center
+}
+</style>
+<meta charset="utf-8">
+<script type="text/javascript"src="js/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/fontawesome-all.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<h1>Twitch Extensions</h1>
+<p id="info">Le live est actif</p>
 
-			#social li {
-				display: inline;
-			}
+<nav>
+	<a href="#last_videos">Videos</a>
+	<a href="#planning">Planning</a>
+	<a href="https://www.twitch.tv/frenchycommunity"><i class="fab fa-twitch"></i></a>
+	<a href="https://www.youtube.com/channel/UCKDmGlE3r7wKLAvxwlSoqEA"><i class="fab fa-youtube"></i></a>
+	<a href="https://discord.gg/FFeWrnj"><i class="fab fa-discord"></i></a>
+	<a href="https://twitter.com/FrenchyCommu"><i class="fab fa-twitter"></i></a>
+</nav>
 
-			#nav li {
-				display: inline;
-				border: solid black 1px;
-			}
-
-		</style>
-	</head>
-	<body>
-		<ul id="social">
-			<li><a href="https://www.twitch.tv/frenchycommunity"><img src="images/twitch.png"></a></li>
-			<li><a href="https://www.youtube.com/channel/UCKDmGlE3r7wKLAvxwlSoqEA"><img src="images/youtube.png"></a></li>
-			<li><a href="https://discord.gg/FFeWrnj"><img src="./images/discord.png"></a></li>
-			<li><a href="https://twitter.com/FrenchyCommu"><img src="images/twitter.png"></a></li>
-			<li><a href="https://computer-loading.com"><img src="images/computer-loading.png"></a></li>
-		</ul>
-		<ul id="nav">
-			<li id="Planning">Planning</li>
-			<li id="Stream">Stream</li>
-		</ul>
-		<div id="Planning_div">
-			<img src="./images/planning">	
+<div class="tab" id="last_videos">
+	<a href="" id="last_video_url">
+		<div id="youtube">
+			<img src="" id="last_video_thumbnail">
+			<h2 id="last_video_title">Titre par defaut</h2>
 		</div>
+	</a>
+	<a href="" id="last_stream_url">
+		<div id="twitch">
+			<img src="" id="last_stream_thumbnail">
+			<h2 id="last_stream_title">Titre du dernier stream</h2>
+		</div>
+	</a>
+</div>
 
-		<div id="Stream_div"></div>
-	</body>
+<div class="tab" id="planning">
+	<img src="https://www.dropbox.com/s/7ztc24hma6941t9/Planningofficiel.png?raw=1" width="600" height="480">
+</div>
 
-	<script type="text/javascript">
-		
-	</script>
-</html>
+<script src="js/app.js"></script>

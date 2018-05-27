@@ -1,13 +1,27 @@
 {
-	"manifest_version" : 2,
-	"name" : "",
-	"version" : "0.1",
-	"description" : "extension pour Scryme TV",
-	"browser_action" : {
-		"default_icon" : "./images/logo.png",
-		"default_popup" : "index.html"
-	},
-	"background" : {
-		"scripts" : ["background.js"]
-	}
+ "manifest_version": 2,
+ "name": "FrenchyCommunity",
+ "description": "Vous informe si il y a un live, Affiche le planning et fait le café :)",
+ "version": "0.1",
+ "content_security_policy": "script-src 'self' https://*/*; object-src 'self'",
+ "content_scripts" : [{
+ 	"js" : ["js/app.js", "js/youtubeAPI.js", "js/jquery.min.js", "js/api.js", "js/client.js"],
+ 	"css" : ["css/style.css"],
+ 	"matches": ["http://*/*", "https://*/*"]
+ }],
+ "browser_action": {
+  "default_popup": "index.html"
+ },
+ "icons": {
+  "64" : "images/logo_normal.png"
+ },
+ "background": {
+    "scripts": ["js/background.js"]
+ },
+ "permissions" : [
+ 	"content_security_policy",
+ 	"https://ajax.googleapis.com",
+ 	"https://apis.google.com",
+ 	"https://accounts.google.com"
+ ]
 }
