@@ -37,35 +37,17 @@ xhr.onreadystatechange = function(channel) {
       elm.style.color = "red";
       elm.innerHTML = "La Frenchy n'est pas en live actuellement. Mais vous pouvez regarder notre dernière vidéo Youtube, ou notre dernier stream en replay :) ! ";
     }else{
-
+      console.log(data.streams[0]);
       last_stream_url.href = "https://twitch.tv/frenchycommunity";
-      last_stream_title.innerHTML = data.channel.status.concat("<br/>joue à ".concat(data.stream.game));
-      last_stream_thumbnail.src = data.stream.preview.medium;
-      if(Notification.permission == "granted"){
-        notifyMe();
-      }
+      last_stream_title.innerHTML = data.streams[0].channel.status.concat("<br/>joue à ".concat(data.streams[0].game));
+      last_stream_thumbnail.src = data.streams[0].preview.medium;
+      
       elm.style.color = "green";
       elm.innerHTML = "Viens voir la Frenchy en live maintenant !";
     }
   }
 }
 xhr.send();
-
-  //Get last stream video
-
-var last_stream = new XMLHttpRequest();
-last_stream.open("GET", 'https://api.twitch.tv/helix/streams?user_login=frenchycommunity');
-last_stream.setRequestHeader("Client-ID", "h2efopm828elwk5shnopq5ya91sdqo");
-last_stream.onreadystatechange = function(channel){
-  if(last_stream.readyState == 4) {
-    var response = JSON.parse(last_stream.responseText);
-    console.log(response)
-    last_stream_url.href = response.videos[0].url;
-    last_stream_thumbnail.src = response.videos[0].thumbnails.url;
-    last_stream_title.innerHTML = response.videos[0].title;
-  }
-}
-last_stream.send();
 
   //Youtube
 
@@ -97,19 +79,21 @@ ytb.send();
 
 //tabs / navigate
 var video_tab = document.getElementById("last_videos");
+console.log(video_tab);
+console.log(video_tab.style);
 var planning_tab = document.getElementById("planning");
-
-var video_btn = document.getElementById("videos")
+var video_btn = document.getElementById("videos");
 video_btn.onclick = function() {
-  video_tab.style.display = block;
-  video_tab.style.visibility = visible;
-  planning_tab.style.display = none;
-  planning_tab.style.visibility = hidden;
-}
-var planning_btn = document.getElementById("tab_planning")
+  video_tab.style.display = "block";
+  video_tab.style.visibility = "visible";
+  planning_tab.style.display = "none";
+  planning_tab.style.visibility = "hidden";
+  console.log(video_tab.style);
+};
+var planning_btn = document.getElementById("tab_planning");
 planning_btn.onclick = function() {
-  video_tab.style.display = none;
-  video_tab.style.visibility = hidden;
-  planning_tab.style.display = block;
-  planning_tab.style.visibility = visible;
-}
+  video_tab.style.display = "none";
+  video_tab.style.visibility = "hidden";
+  planning_tab.style.display = "block";
+  planning_tab.style.visibility = "visible";
+};
