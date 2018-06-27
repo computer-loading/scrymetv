@@ -1,3 +1,47 @@
 body {
-	
+	background-image: url('../images/background.png');
+	color: white;
+}
+
+#planning{
+	visibility: hidden;
+	display: none;
+}
+
+.tab {
+	margin-left: 84px;
+	margin-bottom: 68px;
+	margin-right: 130px;
+}
+
+img{
+	max-height: 800px;
+	max-width: 421px;
+	display: inline;
+
+}
+
+.tab h2 {
+	float: right;
+	color: white;
+	text-align: center;
+	display: inline;
+}
+
+button {
+	background-color: white;
+	color: blue;
+	display: inline-block;
+	text-decoration: none;
+	font-size: 16px;
+	border: none;
+	margin-left: 20px;
+}
+
+#tab_planning{
+	margin-right: 10px;
+}
+nav a , nav a:visited{
+	margin-right: 20px;
+	color: white;
 }
