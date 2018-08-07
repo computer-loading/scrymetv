@@ -3,11 +3,6 @@
  "name": "FrenchyCommunity",
  "description": "Vous informe si il y a un live, Affiche le planning et fait le café :)",
  "version": "0.1",
- "content_scripts" : [{
- 	"js" : ["js/app.js"],
- 	"css" : ["css/style.css"],
- 	"matches" : ["http://*/*"]
- }],
  "browser_action": {
   "default_popup": "index.html"
  },

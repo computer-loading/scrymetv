@@ -25,3 +25,7 @@ et la dernière vidéo youtube //done
 			=> contentDetails.relatedPlaylists.uploads
 			Get channel id
 		snippet.thumbnails.(key).url
+
+agrandir icones
+menu en blanc, pas de fond blanc
+ajouter lien pour dons

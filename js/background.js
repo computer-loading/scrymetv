@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
   if (Notification.permission !== "granted")
     Notification.requestPermission();
 });
-
+var is_streaming = false;
 var tickRate = 60000; // On vérifiera l'api toutes les minutes
 function checkStream() {
   var xhr = new XMLHttpRequest();
@@ -29,11 +29,12 @@ function checkStream() {
       var data = JSON.parse(xhr.responseText);
       if(data["stream"] === null){
         chrome.browserAction.setIcon({path:"images/logo_OFF.png"});
+        is_streaming = false;
       }else{
-        
         chrome.browserAction.setIcon({path:"images/logo_ON.png"});
-        if(Notification.permission == "granted"){
-          notifyMe("La Frenchy est en Stream",data.streams[0].channel.status.concat("<br/>joue à ".concat(data.streams[0].game)));
+        if(Notification.permission == "granted" && is_streaming === false){
+          notifyMe("La Frenchy est en Stream",data.stream.channel.status.concat("<br/>joue à ".concat(data.stream.game)));
+          is_streaming = true;
         }
       }
       // On relance la fonction après X secondes

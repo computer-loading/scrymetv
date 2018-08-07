@@ -1,33 +1,36 @@
 <head>
 
 <meta charset="utf-8">
-<script type="text/javascript"src="js/jquery.min.js"></script>
 <link rel="stylesheet" type="text/css" href="css/fontawesome-all.css">
 <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
-<body><h1>Frenchy TV</h1>
+<body>
+
+	<h1>Frenchy TV</h1>
 
 <nav>
 	<button id="videos">Videos</button>
 	<button id="tab_planning">Planning</button>
-	<a href="https://www.twitch.tv/frenchycommunity"><i class="fab fa-twitch"></i></a>
-	<a href="https://www.youtube.com/channel/UCKDmGlE3r7wKLAvxwlSoqEA"><i class="fab fa-youtube"></i></a>
-	<a href="https://discord.gg/FFeWrnj"><i class="fab fa-discord"></i></a>
-	<a href="https://twitter.com/FrenchyCommu"><i class="fab fa-twitter"></i></a>
+	<a href="https://streamlabs.com/frenchycommunity" target="_blank"><i class="fas fa-dollar-sign fa-lg"></i></a>
+	<a href="https://twitter.com/FrenchyCommu" target="_blank"><i class="fab fa-twitter fa-lg"></i></a>
+	<a href="https://discord.gg/FFeWrnj" target="_blank"><i class="fab fa-discord fa-lg"></i></a>
+	<a href="https://www.youtube.com/channel/UCKDmGlE3r7wKLAvxwlSoqEA" target="_blank"><i class="fab fa-youtube fa-lg"></i></a>
+	<a href="https://www.twitch.tv/frenchycommunity" target="_blank"><i class="fab fa-twitch fa-lg"></i></a>
 </nav>
 
 <div class="tab" id="last_videos">
 	<a href="" id="last_video_url">
 		<div id="youtube">
+			<h2 id="last_video_title"></h2>
 			<img src="" id="last_video_thumbnail">
-			<h2 id="last_video_title">Titre par defaut</h2>
 		</div>
 	</a>
 	<a href="" id="last_stream_url">
 		<div id="twitch">
+			<h2 id="last_stream_title"></h2>
 			<img src="images/default_stream.png" id="last_stream_thumbnail">
-			<h2 id="last_stream_title">Titre du dernier stream</h2>
+			<h3 id="is_playing"></h3>
 		</div>
 	</a>
 </div>
@@ -36,6 +39,7 @@
 	<img src="https://www.dropbox.com/s/7ztc24hma6941t9/Planningofficiel.png?raw=1" width="600" height="480">
 </div>
 
+<h4 id="test"></h4>
+
 <script src="js/app.js"></script>
-<script type="text/javascript"src="js/jquery.min.js"></script>
 </body>
