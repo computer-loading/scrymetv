@@ -1,6 +1,16 @@
+@font-face {
+    font-family: Bebas;
+    src: url(../BEBAS.ttf);
+}
+* {
+	font-family: Bebas;
+}
+
 body {
+
 	background-image: url('../images/background.png');
 	color: white;
+	background-position: fixed;
 }
 
 #planning{
