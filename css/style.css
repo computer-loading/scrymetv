@@ -43,7 +43,7 @@ button {
 	color: white;
 	display: inline-block;
 	text-decoration: none;
-	font-size: 16px;
+	font-size: 20px;
 	border: none;
 	margin-left: 20px;
 }
@@ -61,15 +61,20 @@ nav a , nav a:visited{
 	margin-right: 15px;}
 
 nav{
-	border-bottom: solid medium black;
+	border-bottom: solid medium white;
 	margin-bottom: 10px;
 	padding-bottom: 10px;
 }
 
 #twitch {
-	margin-top: 10px;
+	background-image: radial-gradient(rgb(140, 140, 140), transparent);
+	margin-top: 20px;
 }
 
 h1 {
 	text-align: center;
+}
+
+#youtube img{
+	margin-top: 10px;
 }
